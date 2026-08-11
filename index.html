@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Create a beautiful puzzle from any online or local image." />
+  <title>Puzzlr — Turn any image into a puzzle</title>
+  <link rel="stylesheet" href="app/globals.css" />
+</head>
+<body>
+<main>
+  <header class="topbar"><a class="brand" href="#top"><span class="brandMark">P</span><span>PUZZLR</span></a><p>Turn any image into a puzzle.</p><button class="newPuzzle" id="restartTop">New puzzle <span>↻</span></button></header>
+  <div class="setupOverlay" id="setupOverlay"><section class="hero setupDialog" id="top" role="dialog" aria-modal="true" aria-labelledby="setupTitle">
+    <div class="eyebrow"><span></span> YOUR IMAGE. YOUR CHALLENGE.</div>
+    <h1 id="setupTitle">Piece it <em>together.</em></h1>
+    <p class="intro">Paste an image address or pick one from your device. We’ll scramble it—you bring it home.</p>
+    <div class="sourceCard">
+      <label for="imageAddress">IMAGE ADDRESS</label>
+      <div class="addressRow"><span class="linkIcon">↗</span><input id="imageAddress" placeholder="https://example.com/photo.jpg" /><button id="useImage">Use image <span>→</span></button></div>
+      <div class="divider"><span>OR</span></div>
+      <input id="fileInput" type="file" accept="image/*" hidden />
+      <button class="upload" id="upload"><span>＋</span> Choose from your device</button>
+      <div class="cropEditor" id="cropEditor" hidden>
+        <div class="cropHeader"><div><span>02</span><h2>Frame your puzzle</h2></div><button class="resetCrop" id="resetCrop">Reset to full image ↻</button></div>
+        <div class="cropBody" id="cropBody">
+          <div class="cropPreview"><canvas id="cropCanvas" aria-label="Crop preview"></canvas><p>THE BRIGHT RECTANGLE BECOMES YOUR BOARD</p></div>
+          <div class="cropControls">
+            <div class="dimensionTitle"><span>FINAL BOARD DIMENSIONS</span><small>Defines the crop rectangle</small></div>
+            <div class="dimensionRow"><label>WIDTH <input id="boardWidth" type="number" min="100" max="4000" value="1200" /></label><span>×</span><label>HEIGHT <input id="boardHeight" type="number" min="100" max="4000" value="800" /></label></div>
+            <label class="rangeLabel"><span><b>CROP WIDTH</b><output id="widthValue">100%</output></span><input id="cropWidth" type="range" min="10" max="100" step="1" value="100" /></label>
+            <label class="rangeLabel"><span><b>CROP HEIGHT</b><output id="heightValue">100%</output></span><input id="cropHeight" type="range" min="10" max="100" step="1" value="100" /></label>
+            <label class="rangeLabel"><span><b>HORIZONTAL POSITION</b><output id="xValue">CENTER</output></span><input id="cropX" type="range" min="-100" max="100" step="1" value="0" /></label>
+            <label class="rangeLabel"><span><b>VERTICAL POSITION</b><output id="yValue">CENTER</output></span><input id="cropY" type="range" min="-100" max="100" step="1" value="0" /></label>
+          </div>
+        </div>
+      </div>
+      <div class="setupDifficulty"><span class="step">03</span><div><h2>Choose your challenge</h2><p>More pieces. More glory.</p></div><div class="levelTabs" id="levels" role="group" aria-label="Difficulty"></div><label class="rotationOption"><input id="allowRotation" type="checkbox" /><span><strong>ROTATE PIECES</strong><small>Click or tap to turn 90° clockwise</small></span></label></div>
+      <button class="startPuzzle" id="startPuzzle">Start puzzle <span>→</span></button>
+      <div class="savedSessions" id="savedSessions" hidden><div class="savedSessionsTitle">SAVED SESSIONS</div><div id="sessionList"></div></div>
+    </div>
+  </section></div>
+  <section class="workspace" aria-label="Puzzle workspace">
+    <div class="gameLayout">
+      <aside class="stats">
+        <div class="stat"><span>TIME</span><strong id="time">00:00</strong></div>
+        <div class="stat"><span>MOVES</span><strong id="moves">00</strong></div>
+        <div class="completion"><div><span>COMPLETION</span><strong id="percent">0%</strong></div><div class="track"><i id="progress"></i></div></div>
+        <button class="previewButton" id="preview"><span>◉</span> Preview</button>
+      </aside>
+      <div class="boardWrap"><div class="viewToolbar"><button id="zoomOut" aria-label="Zoom out">−</button><input id="boardZoom" type="range" min="50" max="180" value="100" aria-label="Board zoom" /><output id="zoomValue">100%</output><button id="zoomIn" aria-label="Zoom in">＋</button><button id="centerView">Center view</button><button id="reshuffleLoose">Reshuffle</button><button id="saveSession">Save session</button></div><div class="puzzleStage" id="stage"><canvas id="puzzleCanvas" aria-label="Interactive jigsaw puzzle"></canvas></div><p class="boardCaption"><span>✦</span> DRAG EMPTY SPACE TO PAN · USE THE CONTROLS TO ZOOM</p></div>
+    </div>
+  </section>
+  <div class="previewPopup" id="previewPopup" hidden><div><canvas id="previewPopupCanvas" aria-label="Puzzle preview image"></canvas></div></div>
+  <div class="savedPreviewPopup" id="savedPreviewPopup" hidden><canvas id="savedPreviewCanvas" aria-label="Saved puzzle preview"></canvas></div>
+  <footer><span>PUZZLR</span><p>Made for quiet moments and curious minds.</p><a href="#top">Back to top ↑</a></footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
