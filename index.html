@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Create a beautiful puzzle from any online or local image." />
   <title>Puzzlr — Turn any image into a puzzle</title>
+  <script>try{const t=localStorage.getItem('puzzlr-theme')||'system';document.documentElement.dataset.theme=t==='system'?(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t}catch{}</script>
   <link rel="stylesheet" href="app/globals.css" />
 </head>
 <body>
 <main>
-  <header class="topbar"><a class="brand" href="#top"><span class="brandMark">P</span><span>PUZZLR</span></a><p>Turn any image into a puzzle.</p><button class="newPuzzle" id="restartTop">New puzzle <span>↻</span></button></header>
+  <header class="topbar"><a class="brand" href="#top"><span class="brandMark">P</span><span>PUZZLR</span></a><p>Turn any image into a puzzle.</p><label class="themeControl"><span>THEME</span><select id="themeSelect" aria-label="Color theme"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label><button class="newPuzzle" id="restartTop">New puzzle <span>↻</span></button></header>
   <div class="setupOverlay" id="setupOverlay"><section class="hero setupDialog" id="top" role="dialog" aria-modal="true" aria-labelledby="setupTitle">
     <div class="eyebrow"><span></span> YOUR IMAGE. YOUR CHALLENGE.</div>
     <h1 id="setupTitle">Piece it <em>together.</em></h1>
