@@ -27,6 +27,8 @@ h1 em { color:var(--orange); }
 .intro { max-width:520px; margin:22px auto 34px; color:#5e645f; font-family:Georgia,serif; font-size:18px; line-height:1.5; }
 .sourceCard { max-width:820px; margin:auto; padding:24px; border:1px solid var(--line); background:var(--surface); box-shadow:7px 7px 0 var(--sage); text-align:left; }
 .sourceCard label { display:block; margin-bottom:10px; font-size:10px; letter-spacing:.16em; font-weight:900; }
+.puzzleName { width:100%; margin-bottom:20px; padding:12px 13px; border:1px solid var(--board-line); background:var(--input); color:var(--ink); font:400 16px Georgia,serif; }
+.newPuzzleDivider { margin:22px 0; }
 .addressRow { height:54px; display:flex; align-items:center; border:1px solid var(--board-line); background:var(--input); }
 .linkIcon { padding:0 16px; color:#7d817c; }
 .addressRow input { flex:1; min-width:0; border:0; outline:0; background:transparent; color:#454b47; }
@@ -76,13 +78,16 @@ h1 em { color:var(--orange); }
 .startPuzzle span { margin-left:10px; font-size:15px; }
 .savedSessions { margin-top:16px; padding-top:15px; border-top:1px solid #d8d4ca; }
 .savedSessionsTitle { margin-bottom:8px; font-size:8px; font-weight:900; letter-spacing:.15em; color:#747974; }
-.sessionRow { display:grid; grid-template-columns:1fr auto auto auto; align-items:center; gap:8px; padding:9px 0; border-bottom:1px solid #e3dfd5; }
+.sessionRow { display:grid; grid-template-columns:minmax(120px,1fr) auto; align-items:center; gap:12px; padding:9px 0; border-bottom:1px solid var(--line); }
+.lastSessionRow { padding:12px; border:1px solid var(--orange); background:color-mix(in srgb,var(--orange) 8%,var(--surface)); }
 .sessionRow div { min-width:0; }
 .sessionRow strong,.sessionRow small { display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 .sessionRow strong { font:400 13px Georgia,serif; }
 .sessionRow small { margin-top:3px; color:#7c817c; font-size:8px; }
 .sessionRow button { padding:8px 10px; border:1px solid #aaa99f; background:transparent; text-transform:uppercase; font-size:8px; font-weight:900; cursor:pointer; }
 .sessionRow .deleteSession { color:#a33e2b; border-color:#c99b91; }
+.sessionActions { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:6px; }
+.previousTitle { margin-top:16px; }
 .workspace { padding:46px clamp(20px,5vw,72px) 76px; background:var(--cream); border-top:1px solid var(--line); }
 .difficulty { max-width:1120px; margin:0 auto 38px; display:flex; justify-content:space-between; align-items:end; gap:30px; }
 .difficulty>div:first-child { display:flex; gap:16px; align-items:start; }
@@ -174,5 +179,5 @@ html[data-theme="dark"] .savedPreviewPopup { background:var(--surface); border-c
   .setupDifficulty { grid-template-columns:auto 1fr; }
   .setupDifficulty .levelTabs { grid-column:1/-1; }
 }
-@media (max-width:420px) { .topbar { height:64px; } .newPuzzle { font-size:9px; } .workspace { padding-inline:14px; } .stats { grid-template-columns:1fr 1fr; } .completion,.previewButton { grid-column:1/-1; } .sessionRow { grid-template-columns:1fr 1fr 1fr; } .sessionRow>div { grid-column:1/-1; } }
+@media (max-width:420px) { .topbar { height:64px; } .newPuzzle { font-size:9px; } .workspace { padding-inline:14px; } .stats { grid-template-columns:1fr 1fr; } .completion,.previewButton { grid-column:1/-1; } .sessionRow { grid-template-columns:1fr; } .sessionActions { justify-content:flex-start; } }
 @media (prefers-reduced-motion:reduce) { * { scroll-behavior:auto!important; transition:none!important; } }
