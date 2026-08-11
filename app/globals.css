@@ -102,7 +102,7 @@ h1 em { color:var(--orange); }
 .completion strong { color:var(--orange); font-size:11px; }
 .track { height:3px; margin-top:11px; background:#d5d2c8; }
 .track i { display:block; height:100%; background:var(--orange); transition:width .25s; }
-.previewButton { padding:14px; border:0; background:var(--ink); color:white; text-transform:uppercase; font-size:9px; letter-spacing:.12em; font-weight:800; cursor:pointer; }
+.previewButton { padding:14px; border:0; background:#18201d; color:#fff; text-transform:uppercase; font-size:9px; letter-spacing:.12em; font-weight:800; cursor:pointer; }
 .previewButton span { margin-right:7px; }
 .previewPopup { position:fixed; inset:0; z-index:30; display:grid; place-items:center; background:transparent; pointer-events:none; }
 .previewPopup[hidden] { display:none; }
