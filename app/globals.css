@@ -138,7 +138,7 @@ html[data-theme="dark"] .savedPreviewPopup { background:var(--surface); border-c
 #reshuffleLoose { border-color:var(--orange); color:var(--orange); }
 #saveSession { border-color:#76906a; color:#4e6845; }
 .puzzleStage { position:relative; width:100%; overflow:hidden; border:1px solid var(--board-line); box-shadow:9px 10px 0 var(--sage); background:var(--stage); touch-action:none; }
-#puzzleCanvas { display:block; width:100%; cursor:grab; touch-action:none; }
+#puzzleCanvas { display:block; width:100%; cursor:grab; touch-action:none; user-select:none; -webkit-user-select:none; -webkit-touch-callout:none; }
 #puzzleCanvas:active { cursor:grabbing; }
 .board { position:relative; display:grid; width:100%; overflow:hidden; border:7px solid #fffdf7; outline:1px solid #b7b4aa; box-shadow:9px 10px 0 #c0cbb5; background:#d8d3c6; }
 .piece { min-width:0; min-height:0; padding:0; border:1px solid rgba(255,255,255,.48); background-repeat:no-repeat; cursor:grab; transition:filter .15s, transform .15s; touch-action:none; }
