@@ -136,10 +136,6 @@ h1 em { color:var(--orange); }
 .win button { justify-self:center; padding:11px 20px; border:0; background:var(--orange); color:white; text-transform:uppercase; letter-spacing:.12em; font-size:9px; font-weight:800; cursor:pointer; }
 .boardCaption { text-align:center; margin:20px 0 0; font-size:8px; font-weight:900; letter-spacing:.18em; color:#737771; }
 .boardCaption span { color:var(--orange); margin-right:6px; }
-footer { min-height:90px; padding:28px clamp(20px,5vw,72px); display:flex; align-items:center; gap:30px; border-top:1px solid var(--line); }
-footer>span { font-weight:900; letter-spacing:.13em; }
-footer p { margin:auto; color:#747975; font-family:Georgia,serif; font-style:italic; }
-footer a { color:var(--ink); text-decoration:none; text-transform:uppercase; letter-spacing:.12em; font-size:9px; font-weight:900; }
 @media (max-width:800px) {
   .setupOverlay { padding:0; }
   .setupDialog { border:0; box-shadow:none; padding-top:38px; }
@@ -162,8 +158,6 @@ footer a { color:var(--ink); text-decoration:none; text-transform:uppercase; let
   .cropBody { grid-template-columns:1fr; }
   .setupDifficulty { grid-template-columns:auto 1fr; }
   .setupDifficulty .levelTabs { grid-column:1/-1; }
-  footer { text-align:center; flex-direction:column; gap:10px; }
-  footer p { margin:0; }
 }
 @media (max-width:420px) { .topbar { height:64px; } .newPuzzle { font-size:9px; } .workspace { padding-inline:14px; } .stats { grid-template-columns:1fr 1fr; } .completion,.previewButton { grid-column:1/-1; } .sessionRow { grid-template-columns:1fr 1fr 1fr; } .sessionRow>div { grid-column:1/-1; } }
 @media (prefers-reduced-motion:reduce) { * { scroll-behavior:auto!important; transition:none!important; } }

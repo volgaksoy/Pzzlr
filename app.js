@@ -35,7 +35,7 @@ function fitLayout(){
   const width=stage.clientWidth, [cols,rows]=gridForLevel(), mobile=width<640, imageRatio=crop?crop.sw/crop.sh:(image.naturalWidth/image.naturalHeight||cols/rows);
   let boardW=mobile?Math.min(width-28,560):Math.min(width*.7,920), boardH=boardW/imageRatio;
   const maxBoardH=mobile?Math.min(560,width*1.15):480;if(boardH>maxBoardH){boardH=maxBoardH;boardW=boardH*imageRatio}
-  const trayH=mobile?Math.max(boardH*.55,Math.min(260,width*.55)):0,stageRect=stage.getBoundingClientRect(),stageTop=window.scrollY+stageRect.top,footerBottom=window.scrollY+document.querySelector('footer').getBoundingClientRect().bottom,contentAfterStage=Math.max(0,footerBottom-(window.scrollY+stageRect.bottom)),availableHeight=window.innerHeight-stageTop-contentAfterStage,height=Math.max(1,availableHeight);
+  const trayH=mobile?Math.max(boardH*.55,Math.min(260,width*.55)):0,stageRect=stage.getBoundingClientRect(),stageTop=window.scrollY+stageRect.top,workspaceBottom=window.scrollY+document.querySelector('.workspace').getBoundingClientRect().bottom,contentAfterStage=Math.max(0,workspaceBottom-(window.scrollY+stageRect.bottom)),availableHeight=window.innerHeight-stageTop-contentAfterStage,height=Math.max(1,availableHeight);
   const boardX=(width-boardW)/2, boardY=(height-boardH)/2;
   layout={width,height,boardX,boardY,boardW,boardH,cellW:boardW/cols,cellH:boardH/rows,mobile};
   dpr=Math.min(window.devicePixelRatio||1,2); canvas.width=width*dpr;canvas.height=height*dpr;canvas.style.width=`${width}px`;canvas.style.height=`${height}px`;ctx.setTransform(dpr,0,0,dpr,0,0);
