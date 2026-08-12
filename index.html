@@ -28,17 +28,8 @@
       <button class="upload" id="upload"><span>＋</span> Choose from your device</button>
       <div class="cropEditor" id="cropEditor" hidden>
         <div class="cropHeader"><div><span>02</span><h2>Frame your puzzle</h2></div><button class="resetCrop" id="resetCrop">Reset to full image ↻</button></div>
-        <div class="cropBody" id="cropBody">
-          <div class="cropPreview"><canvas id="cropCanvas" aria-label="Crop preview"></canvas><p>THE BRIGHT RECTANGLE BECOMES YOUR BOARD</p></div>
-          <div class="cropControls">
-            <div class="dimensionTitle"><span>FINAL BOARD DIMENSIONS</span><small>Defines the crop rectangle</small></div>
-            <div class="dimensionRow"><label>WIDTH <input id="boardWidth" type="number" min="100" max="4000" value="1200" /></label><span>×</span><label>HEIGHT <input id="boardHeight" type="number" min="100" max="4000" value="800" /></label></div>
-            <label class="rangeLabel"><span><b>CROP WIDTH</b><output id="widthValue">100%</output></span><input id="cropWidth" type="range" min="10" max="100" step="1" value="100" /></label>
-            <label class="rangeLabel"><span><b>CROP HEIGHT</b><output id="heightValue">100%</output></span><input id="cropHeight" type="range" min="10" max="100" step="1" value="100" /></label>
-            <label class="rangeLabel"><span><b>HORIZONTAL POSITION</b><output id="xValue">CENTER</output></span><input id="cropX" type="range" min="-100" max="100" step="1" value="0" /></label>
-            <label class="rangeLabel"><span><b>VERTICAL POSITION</b><output id="yValue">CENTER</output></span><input id="cropY" type="range" min="-100" max="100" step="1" value="0" /></label>
-          </div>
-        </div>
+        <div class="cropPreview"><canvas id="cropCanvas" aria-label="Interactive crop editor"></canvas><p>DRAG THE RECTANGLE TO MOVE · DRAG A CORNER TO RESIZE</p></div>
+        <div hidden><input id="boardWidth"><input id="boardHeight"><input id="cropWidth"><input id="cropHeight"><input id="cropX"><input id="cropY"></div>
       </div>
       <div class="setupDifficulty"><span class="step">03</span><div><h2>Choose your challenge</h2><p>More pieces. More glory.</p></div><div class="levelTabs" id="levels" role="group" aria-label="Difficulty"></div><label class="rotationOption"><input id="allowRotation" type="checkbox" /><span><strong>ROTATE PIECES</strong><small>Click or tap to turn 90° clockwise</small></span></label></div>
       <button class="startPuzzle" id="startPuzzle">Start puzzle <span>→</span></button>
