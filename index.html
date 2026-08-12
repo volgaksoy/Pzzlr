@@ -11,7 +11,7 @@
 </head>
 <body>
 <main>
-  <header class="topbar"><a class="brand" id="resetSite" href="./" aria-label="Reload Puzzlr"><span class="brandMark">P</span><span>PUZZLR</span></a><p>Turn any image into a puzzle.</p><label class="themeControl"><span>THEME</span><select id="themeSelect" aria-label="Color theme"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label><button class="newPuzzle" id="restartTop">New/load puzzle <span>↻</span></button></header>
+  <header class="topbar"><a class="brand" id="resetSite" href="./" aria-label="Reload Puzzlr"><span class="brandMark">P</span><span>PUZZLR</span></a><button class="newPuzzle" id="restartTop">New/load puzzle <span>↻</span></button><p>Turn any image into a puzzle.</p><label class="themeControl"><span>THEME</span><select id="themeSelect" aria-label="Color theme"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label></header>
   <div class="setupOverlay" id="setupOverlay"><section class="hero setupDialog" id="top" role="dialog" aria-modal="true" aria-labelledby="setupTitle">
     <div class="eyebrow"><span></span> YOUR IMAGE. YOUR CHALLENGE.</div>
     <h1 id="setupTitle">Piece it <em>together.</em></h1>
@@ -41,9 +41,8 @@
         <div class="stat"><span>TIME</span><strong id="time">00:00</strong></div>
         <div class="stat"><span>MOVES</span><strong id="moves">00</strong></div>
         <div class="completion"><div><span>COMPLETION</span><strong id="percent">0%</strong></div><div class="track"><i id="progress"></i></div></div>
-        <button class="previewButton" id="preview"><span>◉</span> Preview</button>
       </aside>
-      <div class="boardWrap"><div class="viewToolbar"><button id="zoomOut" aria-label="Zoom out">−</button><input id="boardZoom" type="range" min="50" max="180" value="100" aria-label="Board zoom" /><output id="zoomValue">100%</output><button id="zoomIn" aria-label="Zoom in">＋</button><button id="centerView">Center view</button><button id="reshuffleLoose">Reshuffle</button><button id="saveSession">Save session</button></div><div class="puzzleStage" id="stage"><canvas id="puzzleCanvas" aria-label="Interactive jigsaw puzzle"></canvas></div><p class="boardCaption"><span>✦</span> DRAG EMPTY SPACE TO PAN · USE THE CONTROLS TO ZOOM</p></div>
+      <div class="boardWrap"><div class="viewToolbar"><button id="zoomOut" aria-label="Zoom out">−</button><input id="boardZoom" type="range" min="25" max="300" value="100" aria-label="Board zoom" /><output id="zoomValue">100%</output><button id="zoomIn" aria-label="Zoom in">＋</button><button id="centerView">Center view</button><button id="reshuffleLoose">Reshuffle</button><button class="previewButton" id="preview"><span>◉</span> Preview</button><button id="saveSession">Save session</button></div><div class="puzzleStage" id="stage"><canvas id="puzzleCanvas" aria-label="Interactive jigsaw puzzle"></canvas></div><p class="boardCaption"><span>✦</span> DRAG EMPTY SPACE TO PAN · USE THE CONTROLS TO ZOOM</p></div>
     </div>
   </section>
   <div class="previewPopup" id="previewPopup" hidden><div><canvas id="previewPopupCanvas" aria-label="Puzzle preview image"></canvas></div></div>

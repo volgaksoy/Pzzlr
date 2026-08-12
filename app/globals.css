@@ -101,7 +101,7 @@ h1 em { color:var(--orange); }
 .levelTabs strong { text-transform:uppercase; font-size:10px; letter-spacing:.15em; }
 .levelTabs small { margin-top:4px; color:#898c86; font-family:Georgia,serif; font-style:italic; }
 .gameLayout { width:100%; max-width:1600px; margin:auto; display:grid; grid-template-columns:minmax(0,1fr); gap:18px; align-items:start; }
-.stats { display:grid; grid-template-columns:92px 92px minmax(160px,1fr) 130px; min-height:54px; gap:1px; background:#cbc8bd; border:1px solid #cbc8bd; font-size:10px; line-height:1; }
+.stats { display:grid; grid-template-columns:92px 92px minmax(160px,1fr); min-height:54px; gap:12px; background:transparent; border:0; font-size:10px; line-height:1; }
 .stat { min-width:0; min-height:52px; display:flex; flex-direction:column; justify-content:center; background:var(--cream); padding:8px 10px; }
 .stat span,.completion span { display:block; font-size:8px; line-height:1; letter-spacing:.15em; font-weight:800; color:#737771; white-space:nowrap; }
 .stat strong { display:block; margin-top:5px; font-family:Georgia,serif; font-size:20px; line-height:1; font-weight:400; font-variant-numeric:tabular-nums; }
@@ -110,7 +110,7 @@ h1 em { color:var(--orange); }
 .completion strong { color:var(--orange); font-size:10px; line-height:1; }
 .track { height:3px; margin-top:8px; background:#d5d2c8; }
 .track i { display:block; height:100%; background:var(--orange); transition:width .25s; }
-.previewButton { min-width:0; min-height:52px; padding:8px 10px; border:0; border-radius:0; background:#18201d; color:#fff; text-transform:uppercase; font-size:8px; line-height:1; letter-spacing:.12em; font-weight:800; cursor:pointer; -webkit-appearance:none; appearance:none; }
+.previewButton { min-width:0; min-height:30px; padding:0 10px; border:1px solid #18201d; border-radius:0; background:#18201d; color:#fff; text-transform:uppercase; font-size:8px; line-height:1; letter-spacing:.12em; font-weight:800; cursor:pointer; -webkit-appearance:none; appearance:none; }
 .previewButton span { margin-right:7px; }
 .previewPopup { position:fixed; inset:0; z-index:30; display:grid; place-items:center; background:transparent; pointer-events:none; }
 .previewPopup[hidden] { display:none; }
@@ -121,7 +121,7 @@ h1 em { color:var(--orange); }
 .savedPreviewPopup canvas { display:block; max-width:min(260px,65vw); max-height:200px; }
 html[data-theme="dark"] .intro,html[data-theme="dark"] .addressRow input,html[data-theme="dark"] .difficulty p,html[data-theme="dark"] .setupDifficulty p,html[data-theme="dark"] .dimensionTitle small,html[data-theme="dark"] .stat span,html[data-theme="dark"] .completion span,html[data-theme="dark"] .sessionRow small { color:#aab5ae; }
 html[data-theme="dark"] .setupOverlay { background:rgba(4,7,5,.78); }
-html[data-theme="dark"] .stats { background:#39433d; border-color:#39433d; }
+html[data-theme="dark"] .stats { background:transparent; border-color:transparent; }
 html[data-theme="dark"] .track { background:#39433d; }
 html[data-theme="dark"] .cropPreview canvas { background:#080b09; }
 html[data-theme="dark"] .savedPreviewPopup { background:var(--surface); border-color:var(--board-line); box-shadow:6px 7px 0 rgba(0,0,0,.5); }
@@ -170,14 +170,14 @@ html[data-theme="dark"] .savedPreviewPopup { background:var(--surface); border-c
   .levelTabs { width:100%; }
   .levelTabs button { min-width:0; flex:1; padding:9px 4px; }
   .gameLayout { grid-template-columns:1fr; gap:16px; }
-  .stats { grid-template-columns:78px 78px minmax(120px,1fr) 100px; }
-  .completion,.previewButton { grid-column:auto; }
+  .stats { grid-template-columns:78px 78px minmax(120px,1fr); }
+  .completion { grid-column:auto; }
   .tip { grid-column:1/-1; }
   .board { border-width:4px; box-shadow:6px 7px 0 #c0cbb5; }
   .cropBody { grid-template-columns:1fr; }
   .setupDifficulty { grid-template-columns:auto 1fr; }
   .setupDifficulty .levelTabs { grid-column:1/-1; }
 }
-@media (max-width:520px) { .stats { grid-template-columns:70px 70px minmax(105px,1fr) 82px; } .stat,.completion,.previewButton { min-height:48px; padding:7px 8px; } .stat strong { font-size:18px; } .previewButton span { display:none; } }
-@media (max-width:420px) { .topbar { height:64px; } .newPuzzle { font-size:9px; } .workspace { padding-inline:14px; } .stats { grid-template-columns:64px 64px minmax(96px,1fr) 70px; } .stat span,.completion span,.previewButton { font-size:7px; } .sessionRow { grid-template-columns:1fr; } .sessionActions { justify-content:flex-start; } }
+@media (max-width:520px) { .stats { grid-template-columns:70px 70px minmax(105px,1fr); } .stat,.completion { min-height:48px; padding:7px 8px; } .stat strong { font-size:18px; } .previewButton span { display:none; } }
+@media (max-width:420px) { .topbar { height:64px; } .newPuzzle { font-size:8px; } .workspace { padding-inline:14px; } .stats { grid-template-columns:64px 64px minmax(96px,1fr); } .stat span,.completion span,.previewButton { font-size:7px; } .sessionRow { grid-template-columns:1fr; } .sessionActions { justify-content:flex-start; } }
 @media (prefers-reduced-motion:reduce) { * { scroll-behavior:auto!important; transition:none!important; } }
