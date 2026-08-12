@@ -10,9 +10,16 @@ button { color:inherit; }
 .brand { color:var(--ink); display:flex; align-items:center; gap:10px; font-weight:900; letter-spacing:.12em; text-decoration:none; }
 .brandMark { width:34px; height:34px; display:grid; place-items:center; color:var(--paper); background:var(--ink); border-radius:2px; transform:rotate(-4deg); font-family:Georgia,serif; font-style:italic; font-size:23px; }
 .topbar>p { margin:auto; font-family:Georgia,serif; font-style:italic; color:var(--label); }
-.themeControl { display:flex; align-items:center; gap:7px; }
-.themeControl>span { color:var(--label); font-size:8px; font-weight:900; letter-spacing:.13em; }
-.themeControl select { padding:7px 25px 7px 9px; border:1px solid var(--line); border-radius:0; background:var(--surface); color:var(--ink); font-size:9px; font-weight:800; text-transform:uppercase; cursor:pointer; }
+.options { position:relative; margin-left:auto; }
+.optionsButton { width:36px; height:36px; display:grid; place-items:center; padding:0; border:1px solid var(--line); background:var(--surface); color:var(--ink); font-size:19px; line-height:1; cursor:pointer; }
+.optionsMenu { position:absolute; z-index:50; top:44px; right:0; width:250px; padding:14px; border:1px solid var(--line); background:var(--surface); box-shadow:7px 8px 0 var(--sage); }
+.optionsMenu[hidden] { display:none; }
+.optionsMenu>strong { display:block; margin-bottom:12px; color:var(--label); font-size:8px; letter-spacing:.16em; }
+.optionsMenu>label { display:flex; justify-content:space-between; align-items:center; gap:14px; padding:10px 0; border-top:1px solid var(--line); font-size:10px; font-weight:800; }
+.optionsMenu select { padding:7px 25px 7px 9px; border:1px solid var(--line); background:var(--input); color:var(--ink); font-size:9px; font-weight:800; text-transform:uppercase; cursor:pointer; }
+.optionToggle>span { display:flex; flex-direction:column; gap:4px; }
+.optionToggle small { color:var(--label); font:italic 10px Georgia,serif; }
+.optionToggle input { width:18px; height:18px; margin:0; accent-color:var(--orange); }
 .newPuzzle { border:0; background:transparent; text-transform:uppercase; letter-spacing:.12em; font-size:11px; font-weight:800; cursor:pointer; }
 .newPuzzle span { margin-left:8px; font-size:16px; }
 .hero { padding:72px 20px 42px; text-align:center; background:radial-gradient(circle at 20% 20%,rgba(202,215,189,.25),transparent 28%),var(--paper); }
@@ -156,7 +163,6 @@ html[data-theme="dark"] .savedPreviewPopup { background:var(--surface); border-c
 .boardCaption span { color:var(--orange); margin-right:6px; }
 @media (max-width:800px) {
   .topbar { gap:10px; }
-  .themeControl>span { display:none; }
   .setupOverlay { padding:0; }
   .setupDialog { border:0; box-shadow:none; padding-top:38px; }
   .topbar>p { display:none; }

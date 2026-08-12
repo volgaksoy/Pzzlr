@@ -11,7 +11,7 @@
 </head>
 <body>
 <main>
-  <header class="topbar"><a class="brand" id="resetSite" href="./" aria-label="Reload Puzzlr"><span class="brandMark">P</span><span>PUZZLR</span></a><button class="newPuzzle" id="restartTop">New/load puzzle <span>↻</span></button><p>Turn any image into a puzzle.</p><label class="themeControl"><span>THEME</span><select id="themeSelect" aria-label="Color theme"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label></header>
+  <header class="topbar"><a class="brand" id="resetSite" href="./" aria-label="Reload Puzzlr"><span class="brandMark">P</span><span>PUZZLR</span></a><button class="newPuzzle" id="restartTop">New/load puzzle <span>↻</span></button><p>Turn any image into a puzzle.</p><div class="options"><button class="optionsButton" id="optionsButton" aria-label="Open options" aria-expanded="false">⚙</button><div class="optionsMenu" id="optionsMenu" hidden><strong>OPTIONS</strong><label><span>Theme</span><select id="themeSelect" aria-label="Color theme"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label><label class="optionToggle"><span><b>Glow / shadows</b><small>Disable for better performance</small></span><input id="glowToggle" type="checkbox" checked /></label></div></div></header>
   <div class="setupOverlay" id="setupOverlay"><section class="hero setupDialog" id="top" role="dialog" aria-modal="true" aria-labelledby="setupTitle">
     <div class="eyebrow"><span></span> YOUR IMAGE. YOUR CHALLENGE.</div>
     <h1 id="setupTitle">Piece it <em>together.</em></h1>
