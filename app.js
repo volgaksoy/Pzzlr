@@ -48,12 +48,10 @@ function makePieces(){
   pieces=[]; for(let r=0;r<rows;r++)for(let c=0;c<cols;c++)pieces.push({id:r*cols+c,col:c,row:r,edges:{top:r?mate(horizontal[r-1][c]):null,right:c<cols-1?vertical[r][c]:null,bottom:r<rows-1?horizontal[r][c]:null,left:c?mate(vertical[r][c-1]):null}});
 }
 function fitLayout(){
-  const width=stage.clientWidth, [cols,rows]=gridForLevel(), mobile=width<640, imageRatio=crop?crop.sw/crop.sh:(image.naturalWidth/image.naturalHeight||cols/rows);
-  let boardW=mobile?Math.min(width-28,560):Math.min(width*.7,920), boardH=boardW/imageRatio;
-  const maxBoardH=mobile?Math.min(560,width*1.15):480;if(boardH>maxBoardH){boardH=maxBoardH;boardW=boardH*imageRatio}
-  const trayH=mobile?Math.max(boardH*.55,Math.min(260,width*.55)):0,stageRect=stage.getBoundingClientRect(),stageTop=window.scrollY+stageRect.top,workspaceBottom=window.scrollY+document.querySelector('.workspace').getBoundingClientRect().bottom,contentAfterStage=Math.max(0,workspaceBottom-(window.scrollY+stageRect.bottom)),availableHeight=window.innerHeight-stageTop-contentAfterStage,height=Math.max(1,availableHeight);
+  const width=stage.clientWidth,[cols,rows]=gridForLevel(),touchLayout=width<640||matchMedia('(pointer:coarse)').matches,imageRatio=crop?crop.sw/crop.sh:(image.naturalWidth/image.naturalHeight||cols/rows),stageRect=stage.getBoundingClientRect(),stageTop=window.scrollY+stageRect.top,workspaceBottom=window.scrollY+document.querySelector('.workspace').getBoundingClientRect().bottom,contentAfterStage=Math.max(0,workspaceBottom-(window.scrollY+stageRect.bottom)),availableHeight=window.innerHeight-stageTop-contentAfterStage,height=Math.max(1,availableHeight),mobile=width<640;
+  const maxBoardW=touchLayout?width*.58:Math.min(width*.7,920),maxBoardH=touchLayout?height*.58:Math.min(height*.72,480);let boardW=maxBoardW,boardH=boardW/imageRatio;if(boardH>maxBoardH){boardH=maxBoardH;boardW=boardH*imageRatio}
   const boardX=(width-boardW)/2, boardY=(height-boardH)/2;
-  layout={width,height,boardX,boardY,boardW,boardH,cellW:boardW/cols,cellH:boardH/rows,mobile};
+  layout={width,height,boardX,boardY,boardW,boardH,cellW:boardW/cols,cellH:boardH/rows,mobile:touchLayout};
   dpr=Math.min(window.devicePixelRatio||1,2); canvas.width=width*dpr;canvas.height=height*dpr;canvas.style.width=`${width}px`;canvas.style.height=`${height}px`;ctx.setTransform(dpr,0,0,dpr,0,0);
 }
 function scatter(){
