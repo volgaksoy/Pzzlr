@@ -74,7 +74,7 @@ h1 em { color:var(--orange); }
 .setupDifficulty { display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:14px; margin-top:24px; padding-top:20px; border-top:1px solid #d8d4ca; }
 .setupDifficulty h2 { margin:0 0 3px; font:400 20px Georgia,serif; }
 .setupDifficulty p { margin:0; color:#777b75; font:italic 12px Georgia,serif; }
-.rotationOption { grid-column:1/-1; display:flex; flex-wrap:nowrap; align-items:center; gap:11px; padding:12px 14px; border:1px solid var(--line); background:var(--surface); color:var(--ink); cursor:pointer; }
+.sourceCard .rotationOption { grid-column:1/-1; display:flex; flex-wrap:nowrap; align-items:center; gap:11px; padding:12px 14px; border:1px solid var(--line); background:var(--surface); color:var(--ink); cursor:pointer; }
 .rotationOption input { appearance:none; width:18px; height:18px; margin:0; display:grid; place-content:center; border:1px solid var(--board-line); border-radius:2px; background:var(--input); cursor:pointer; }
 .rotationOption input:checked { border-color:var(--orange); background:var(--orange); }
 .rotationOption input::before { content:"✓"; color:#fff; font-size:13px; font-weight:900; line-height:1; transform:scale(0); }
