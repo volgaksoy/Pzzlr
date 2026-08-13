@@ -21,6 +21,11 @@ button { color:inherit; }
 .optionToggle>span { display:flex; flex-direction:column; gap:4px; }
 .optionToggle small { color:var(--label); font:italic 10px Georgia,serif; }
 .optionToggle input { width:18px; height:18px; margin:0; accent-color:var(--orange); }
+.cacheDebugPanel { position:fixed; z-index:90; left:10px; bottom:10px; width:min(340px,calc(100vw - 20px)); padding:8px; border:1px solid #59625d; background:rgba(15,19,17,.94); color:#eef2ed; box-shadow:4px 5px 0 rgba(0,0,0,.3); pointer-events:none; }
+.cacheDebugPanel[hidden] { display:none; }
+.cacheDebugPanel strong { display:block; margin-bottom:6px; color:#ff7650; font-size:10px; letter-spacing:.14em; }
+.cacheDebugPanel canvas { display:block; width:100%; height:auto; max-height:220px; object-fit:contain; background:#e7e1d4; }
+.cacheDebugPanel output { display:block; margin-top:6px; color:#c8d0ca; font:10px/1.35 monospace; white-space:normal; }
 .newPuzzle { border:0; background:transparent; text-transform:uppercase; letter-spacing:.12em; font-size:11px; font-weight:800; cursor:pointer; }
 .newPuzzle span { margin-left:8px; font-size:16px; }
 .hero { padding:72px 20px 42px; text-align:center; background:radial-gradient(circle at 20% 20%,rgba(202,215,189,.25),transparent 28%),var(--paper); }
