@@ -7,7 +7,7 @@
   <title>Puzzlr — Turn any image into a puzzle</title>
   <link rel="icon" href="public/favicon.svg" type="image/svg+xml" />
   <script>try{const t=localStorage.getItem('puzzlr-theme')||'system';document.documentElement.dataset.theme=t==='system'?(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t}catch{}</script>
-  <link rel="stylesheet" href="app/globals.css?v=20260813-nav-snapshot" />
+  <link rel="stylesheet" href="app/globals.css?v=20260813-fullscreen-play" />
 </head>
 <body>
 <main>
@@ -42,12 +42,12 @@
         <div class="stat"><span>MOVES</span><strong id="moves">00</strong></div>
         <div class="completion"><div><span>COMPLETION</span><strong id="percent">0%</strong></div><div class="track"><i id="progress"></i></div></div>
       </aside>
-      <div class="boardWrap"><div class="viewToolbar"><button id="zoomOut" aria-label="Zoom out">−</button><input id="boardZoom" type="range" min="25" max="300" value="100" aria-label="Board zoom" /><output id="zoomValue">100%</output><button id="zoomIn" aria-label="Zoom in">＋</button><button id="centerView">Center view</button><button id="reshuffleLoose">Reshuffle</button><button class="previewButton" id="preview"><span>◉</span> Preview</button><button id="saveSession">Save session</button></div><div class="puzzleStage" id="stage"><canvas id="puzzleCanvas" aria-label="Interactive jigsaw puzzle"></canvas></div><p class="boardCaption"><span>✦</span> DRAG EMPTY SPACE TO PAN · USE THE CONTROLS TO ZOOM</p></div>
+      <div class="boardWrap"><div class="viewToolbar"><button id="zoomOut" aria-label="Zoom out">−</button><input id="boardZoom" type="range" min="25" max="300" value="100" aria-label="Board zoom" /><output id="zoomValue">100%</output><button id="zoomIn" aria-label="Zoom in">＋</button><button id="centerView">Center view</button><button id="reshuffleLoose">Reshuffle</button><button class="previewButton" id="preview"><span>◉</span> Preview</button><button id="saveSession">Save session</button></div><div class="puzzleStage" id="stage"><canvas id="puzzleCanvas" aria-label="Interactive jigsaw puzzle"></canvas></div></div>
     </div>
   </section>
   <div class="previewPopup" id="previewPopup" hidden><div><canvas id="previewPopupCanvas" aria-label="Puzzle preview image"></canvas></div></div>
   <div class="savedPreviewPopup" id="savedPreviewPopup" hidden><canvas id="savedPreviewCanvas" aria-label="Saved puzzle preview"></canvas></div>
 </main>
-<script src="app.js?v=20260813-nav-snapshot"></script>
+<script src="app.js?v=20260813-fullscreen-play"></script>
 </body>
 </html>
