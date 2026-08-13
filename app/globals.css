@@ -85,6 +85,9 @@ h1 em { color:var(--orange); }
 .startPuzzle { width:100%; margin-top:22px; padding:17px; border:0; background:var(--orange); color:white; text-transform:uppercase; letter-spacing:.16em; font-size:10px; font-weight:900; cursor:pointer; }
 .startPuzzle span { margin-left:10px; font-size:15px; }
 .savedSessions { margin-top:16px; padding-top:15px; border-top:1px solid #d8d4ca; }
+.savedSessionsHeading { margin-bottom:16px; }
+.savedSessionsHeading span { color:var(--orange); font-size:8px; font-weight:900; letter-spacing:.18em; }
+.savedSessionsHeading h2 { margin:6px 0 0; font:400 25px Georgia,serif; }
 .savedSessionsTitle { margin-bottom:8px; font-size:8px; font-weight:900; letter-spacing:.15em; color:#747974; }
 .sessionRow { display:grid; grid-template-columns:minmax(120px,1fr) auto; align-items:center; gap:12px; padding:9px 0; border-bottom:1px solid var(--line); }
 .lastSessionRow { padding:12px; border:1px solid var(--orange); background:color-mix(in srgb,var(--orange) 8%,var(--surface)); }
@@ -93,9 +96,13 @@ h1 em { color:var(--orange); }
 .sessionRow strong { font:400 13px Georgia,serif; }
 .sessionRow small { margin-top:3px; color:#7c817c; font-size:8px; }
 .sessionRow button { padding:8px 10px; border:1px solid #aaa99f; background:transparent; text-transform:uppercase; font-size:8px; font-weight:900; cursor:pointer; }
+.sessionRow .resumeOne { border-color:#3f7f4d; background:#3f7f4d; color:#fff; }
+.sessionRow .resumeOne:hover,.sessionRow .resumeOne:focus-visible { background:#2f693c; }
 .sessionRow .deleteSession { color:#a33e2b; border-color:#c99b91; }
 .sessionActions { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:6px; }
 .previousTitle { margin-top:16px; }
+.newPuzzleChoice { width:100%; margin-top:20px; padding:14px; border:1px solid var(--board-line); background:var(--surface); color:var(--ink); font-size:10px; font-weight:900; letter-spacing:.12em; text-transform:uppercase; cursor:pointer; }
+.createPuzzlePanel[hidden] { display:none; }
 .workspace { height:calc(100dvh - 76px); min-height:0; padding:0; background:var(--cream); overflow:hidden; }
 .difficulty { max-width:1120px; margin:0 auto 38px; display:flex; justify-content:space-between; align-items:end; gap:30px; }
 .difficulty>div:first-child { display:flex; gap:16px; align-items:start; }

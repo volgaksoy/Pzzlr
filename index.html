@@ -7,7 +7,7 @@
   <title>Puzzlr — Turn any image into a puzzle</title>
   <link rel="icon" href="public/favicon.svg" type="image/svg+xml" />
   <script>try{const t=localStorage.getItem('puzzlr-theme')||'system';document.documentElement.dataset.theme=t==='system'?(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t}catch{}</script>
-  <link rel="stylesheet" href="app/globals.css?v=20260813-overscan-nav" />
+  <link rel="stylesheet" href="app/globals.css?v=20260813-setup-flow" />
 </head>
 <body>
 <main>
@@ -17,8 +17,8 @@
     <h1 id="setupTitle">Piece it <em>together.</em></h1>
     <p class="intro">Paste an image address or pick one from your device. We’ll scramble it—you bring it home.</p>
     <div class="sourceCard">
-      <div class="savedSessions" id="savedSessions" hidden><div class="savedSessionsTitle">RESUME LAST PUZZLE</div><div id="lastSession"></div><div class="savedSessionsTitle previousTitle">OTHER SAVED PUZZLES</div><div id="sessionList"></div></div>
-      <div class="divider newPuzzleDivider"><span>NEW PUZZLE</span></div>
+      <div class="savedSessions" id="savedSessions" hidden><div class="savedSessionsHeading"><span>SAVED PUZZLES</span><h2>Continue where you left off.</h2></div><div id="lastSession"></div><div class="savedSessionsTitle previousTitle">MORE SAVED PUZZLES</div><div id="sessionList"></div><button class="newPuzzleChoice" id="showNewPuzzle" type="button">＋ New puzzle</button></div>
+      <div class="createPuzzlePanel" id="createPuzzlePanel"><div class="divider newPuzzleDivider"><span>NEW PUZZLE</span></div>
       <label for="puzzleName">PUZZLE NAME</label>
       <input class="puzzleName" id="puzzleName" maxlength="80" autocomplete="off" />
       <label for="imageAddress">IMAGE ADDRESS</label>
@@ -32,7 +32,7 @@
         <div hidden><input id="boardWidth"><input id="boardHeight"><input id="cropWidth"><input id="cropHeight"><input id="cropX"><input id="cropY"></div>
       </div>
       <div class="setupDifficulty"><span class="step">03</span><div><h2>Choose your challenge</h2><p>More pieces. More glory.</p></div><div class="levelTabs" id="levels" role="group" aria-label="Difficulty"></div><label class="rotationOption"><input id="allowRotation" type="checkbox" /><span><strong>ROTATE PIECES</strong><small>Click or tap to turn 90° clockwise</small></span></label></div>
-      <button class="startPuzzle" id="startPuzzle">Start puzzle <span>→</span></button>
+      <button class="startPuzzle" id="startPuzzle">Start puzzle <span>→</span></button></div>
     </div>
   </section></div>
   <section class="workspace" aria-label="Puzzle workspace">
@@ -48,6 +48,6 @@
   <div class="previewPopup" id="previewPopup" hidden><div><canvas id="previewPopupCanvas" aria-label="Puzzle preview image"></canvas></div></div>
   <div class="savedPreviewPopup" id="savedPreviewPopup" hidden><canvas id="savedPreviewCanvas" aria-label="Saved puzzle preview"></canvas></div>
 </main>
-<script src="app.js?v=20260813-overscan-nav"></script>
+<script src="app.js?v=20260813-setup-flow"></script>
 </body>
 </html>
