@@ -119,7 +119,7 @@ h1 em { color:var(--orange); }
 .levelTabs small { margin-top:4px; color:#898c86; font-family:Georgia,serif; font-style:italic; }
 .gameLayout { position:relative; width:100%; height:100%; min-height:0; }
 .stats { position:absolute; z-index:5; top:8px; left:8px; right:8px; display:flex; align-items:stretch; gap:1px; min-height:40px; padding:3px; background:var(--surface); box-shadow:0 2px 10px rgba(24,32,29,.2); font-size:11px; line-height:1; }
-.hudSave { flex:0 0 auto; min-width:58px; padding:0 10px; border:1px solid #76906a; background:var(--surface); color:#4e6845; font-size:11px; font-weight:900; text-transform:uppercase; letter-spacing:.08em; cursor:pointer; margin-right:5px; }
+.hudSave { flex:0 0 auto; min-width:58px; padding:0 10px; border:1px solid #76906a; background:var(--surface); color:#4e6845; font-size:11px; font-weight:900; text-transform:uppercase; letter-spacing:.08em; cursor:pointer; }
 .stat { flex:0 0 64px; min-width:0; min-height:34px; display:flex; flex-direction:column; justify-content:center; background:var(--surface); padding:4px 6px; }
 .stat span,.completion span { display:block; font-size:10px; line-height:1; letter-spacing:.15em; font-weight:800; color:#737771; white-space:nowrap; }
 .stat strong { display:block; margin-top:3px; font-family:Georgia,serif; font-size:16px; line-height:1; font-weight:400; font-variant-numeric:tabular-nums; }
@@ -150,10 +150,10 @@ html[data-theme="dark"] .savedPreviewPopup { background:var(--surface); border-c
 .boardWrap { position:relative; width:100%; height:100%; min-width:0; min-height:0; }
 .viewToolbar { flex:1 1 auto; display:flex; flex-wrap:nowrap; justify-content:flex-end; align-items:center; gap:4px; min-width:0; margin-left:5px; }
 .viewToolbar button { height:30px; padding:0 10px; border:1px solid var(--board-line); background:var(--surface); color:var(--ink); font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:.08em; cursor:pointer; }
-.viewToolbar button:first-child,.viewToolbar button:nth-of-type(2) { width:32px; padding:0; font-size:16px; }
+.viewToolbar #zoomOut,.viewToolbar #zoomIn { width:32px; padding:0; font-size:16px; }
 .viewToolbar input { width:min(180px,30vw); accent-color:var(--orange); }
 .viewToolbar output { min-width:38px; color:var(--orange); font-size:11px; font-weight:900; }
-#reshuffleLoose { border-color:var(--orange); color:var(--orange); }
+#reshuffleLoose { margin-left:auto; border-color:var(--orange); color:var(--orange); }
 #saveSession { border-color:#76906a; color:#4e6845; }
 .puzzleStage { position:absolute; inset:0; width:100%; height:100%; overflow:hidden; border:0; box-shadow:none; background:#e7e1d4; touch-action:none; }
 #puzzleCanvas { display:block; width:100%; cursor:grab; touch-action:none; user-select:none; -webkit-user-select:none; -webkit-touch-callout:none; }
