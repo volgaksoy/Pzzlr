@@ -103,6 +103,8 @@ h1 em { color:var(--orange); }
 .previousTitle { margin-top:16px; }
 .newPuzzleChoice { width:100%; margin-top:20px; padding:14px; border:1px solid var(--board-line); background:var(--surface); color:var(--ink); font-size:10px; font-weight:900; letter-spacing:.12em; text-transform:uppercase; cursor:pointer; }
 .createPuzzlePanel[hidden] { display:none; }
+.backToSessions { margin:0 0 8px; padding:9px 12px; border:1px solid var(--board-line); background:var(--surface); color:var(--ink); font-size:10px; font-weight:900; letter-spacing:.08em; text-transform:uppercase; cursor:pointer; }
+.backToSessions[hidden] { display:none; }
 .workspace { height:calc(100dvh - 76px); min-height:0; padding:0; background:var(--cream); overflow:hidden; }
 .difficulty { max-width:1120px; margin:0 auto 38px; display:flex; justify-content:space-between; align-items:end; gap:30px; }
 .difficulty>div:first-child { display:flex; gap:16px; align-items:start; }

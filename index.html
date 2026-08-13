@@ -7,7 +7,7 @@
   <title>Puzzlr — Turn any image into a puzzle</title>
   <link rel="icon" href="public/favicon.svg" type="image/svg+xml" />
   <script>try{const t=localStorage.getItem('puzzlr-theme')||'system';document.documentElement.dataset.theme=t==='system'?(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t}catch{}</script>
-  <link rel="stylesheet" href="app/globals.css?v=20260813-readable-type" />
+  <link rel="stylesheet" href="app/globals.css?v=20260813-back-sessions" />
 </head>
 <body>
 <main>
@@ -18,7 +18,7 @@
     <p class="intro">Paste an image address or pick one from your device. We’ll scramble it—you bring it home.</p>
     <div class="sourceCard">
       <div class="savedSessions" id="savedSessions" hidden><div class="savedSessionsHeading"><span>SAVED PUZZLES</span><h2>Continue where you left off.</h2></div><div id="lastSession"></div><div class="savedSessionsTitle previousTitle">MORE SAVED PUZZLES</div><div id="sessionList"></div><button class="newPuzzleChoice" id="showNewPuzzle" type="button">＋ New puzzle</button></div>
-      <div class="createPuzzlePanel" id="createPuzzlePanel"><div class="divider newPuzzleDivider"><span>NEW PUZZLE</span></div>
+      <div class="createPuzzlePanel" id="createPuzzlePanel"><button class="backToSessions" id="backToSessions" type="button" hidden>← Back to saved sessions</button><div class="divider newPuzzleDivider"><span>NEW PUZZLE</span></div>
       <label for="puzzleName">PUZZLE NAME</label>
       <input class="puzzleName" id="puzzleName" maxlength="80" autocomplete="off" />
       <label for="imageAddress">IMAGE ADDRESS</label>
@@ -48,6 +48,6 @@
   <div class="previewPopup" id="previewPopup" hidden><div><canvas id="previewPopupCanvas" aria-label="Puzzle preview image"></canvas></div></div>
   <div class="savedPreviewPopup" id="savedPreviewPopup" hidden><canvas id="savedPreviewCanvas" aria-label="Saved puzzle preview"></canvas></div>
 </main>
-<script src="app.js?v=20260813-readable-type"></script>
+<script src="app.js?v=20260813-back-sessions"></script>
 </body>
 </html>
