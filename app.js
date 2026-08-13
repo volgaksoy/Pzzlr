@@ -1,5 +1,5 @@
 const LEVELS = { Easy:4, Medium:8, Hard:16, Pro:32 };
-const DEFAULT_IMAGE = 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=85';
+const DEFAULT_IMAGE = 'public/default-fantasy-festival.png';
 let level='Medium', imageUrl=DEFAULT_IMAGE, image=new Image(), imageBlob=null, crop=null, pieces=[], groups=[], moves=0, seconds=0, timer=null, localUrl=null;
 let layout=null, active=null, hovered=null, previewing=false, dpr=1, gameStarted=false, gameWon=false, rotationEnabled=false, view={zoom:1,panX:0,panY:0};
 let sessionDirty=false;
