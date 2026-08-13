@@ -25,7 +25,7 @@
       <div class="addressRow"><span class="linkIcon">↗</span><input id="imageAddress" placeholder="https://example.com/photo.jpg" /><button id="useImage">Use image <span>→</span></button></div>
       <div class="divider"><span>OR</span></div>
       <input id="fileInput" type="file" accept="image/*" hidden />
-      <button class="upload" id="upload"><span>＋</span> Choose from your device</button>
+      <div class="imagePickers"><button class="upload" id="upload"><span>＋</span> Choose from your device</button><button class="upload" id="pasteImage"><span>▣</span> Paste from clipboard</button></div>
       <div class="cropEditor" id="cropEditor" hidden>
         <div class="cropHeader"><div><span>02</span><h2>Frame your puzzle</h2></div><button class="resetCrop" id="resetCrop">Reset to full image ↻</button></div>
         <div class="cropPreview"><canvas id="cropCanvas" aria-label="Interactive crop editor"></canvas><p>DRAG THE RECTANGLE TO MOVE · DRAG A CORNER TO RESIZE</p></div>
@@ -49,6 +49,6 @@
   <div class="savedPreviewPopup" id="savedPreviewPopup" hidden><canvas id="savedPreviewCanvas" aria-label="Saved puzzle preview"></canvas></div>
   <aside class="cacheDebugPanel" id="cacheDebugPanel" hidden><strong>NAVIGATION CACHE</strong><canvas id="cacheDebugCanvas" aria-label="Navigation cache debug view"></canvas><output id="cacheDebugInfo">Waiting for pan or zoom…</output></aside>
 </main>
-<script src="app.js?v=20260814-fixed-outline-width"></script>
+<script src="app.js?v=20260814-clipboard-images"></script>
 </body>
 </html>

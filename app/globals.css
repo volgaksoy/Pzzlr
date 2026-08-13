@@ -51,6 +51,7 @@ h1 em { color:var(--orange); }
 .divider:before,.divider:after { content:""; height:1px; background:#ddd9cf; flex:1; }
 .upload { width:100%; padding:15px; border:1px dashed #aaa99f; background:transparent; font-family:Georgia,serif; font-style:italic; cursor:pointer; }
 .upload span { color:var(--orange); font-style:normal; margin-right:8px; }
+.imagePickers { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
 .cropEditor { margin-top:22px; padding-top:20px; border-top:1px solid #d8d4ca; }
 .cropHeader { display:flex; align-items:center; justify-content:space-between; gap:18px; }
 .cropHeader>div:first-child { display:flex; align-items:center; gap:10px; }
@@ -202,5 +203,6 @@ html[data-theme="dark"] .savedPreviewPopup { background:var(--surface); border-c
   .setupDifficulty .levelTabs { grid-column:1/-1; }
 }
 @media (max-width:520px) { .stats { top:6px; left:6px; right:6px; } .hudSave { min-width:52px; padding-inline:7px; } .stat { flex-basis:54px; } .completion { flex:1 1 96px; min-width:96px; } .stat,.completion { min-height:32px; padding:4px 5px; } .stat strong { font-size:15px; } .viewToolbar input { width:min(110px,25vw); } .previewButton span { display:none; } }
+@media (max-width:520px) { .imagePickers { grid-template-columns:1fr; } }
 @media (max-width:420px) { .topbar { height:64px; } .newPuzzle { font-size:10px; } .workspace { height:calc(100dvh - 64px); } .stat span,.completion span,.previewButton { font-size:10px; } .viewToolbar button { padding-inline:6px; font-size:10px; } .viewToolbar input { width:70px; } .viewToolbar output { min-width:30px; } .sessionRow { grid-template-columns:1fr; } .sessionActions { justify-content:flex-start; } }
 @media (prefers-reduced-motion:reduce) { * { scroll-behavior:auto!important; transition:none!important; } }
