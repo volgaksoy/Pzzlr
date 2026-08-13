@@ -7,7 +7,7 @@
   <title>Puzzlr — Turn any image into a puzzle</title>
   <link rel="icon" href="public/favicon.svg" type="image/svg+xml" />
   <script>try{const t=localStorage.getItem('puzzlr-theme')||'system';document.documentElement.dataset.theme=t==='system'?(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t}catch{}</script>
-  <link rel="stylesheet" href="app/globals.css?v=20260813-mobile-board-fit" />
+  <link rel="stylesheet" href="app/globals.css?v=20260813-compact-hud" />
 </head>
 <body>
 <main>
@@ -37,17 +37,17 @@
   </section></div>
   <section class="workspace" aria-label="Puzzle workspace">
     <div class="gameLayout">
-      <aside class="stats">
+      <aside class="stats"><button class="hudSave" id="saveSession">Save</button>
         <div class="stat"><span>TIME</span><strong id="time">00:00</strong></div>
         <div class="stat"><span>MOVES</span><strong id="moves">00</strong></div>
-        <div class="completion"><div><span>COMPLETION</span><strong id="percent">0%</strong></div><div class="track"><i id="progress"></i></div></div>
+        <div class="completion"><div><span>COMPLETION</span><strong id="percent">0%</strong></div><div class="track"><i id="progress"></i></div></div><div class="viewToolbar"><button id="zoomOut" aria-label="Zoom out">−</button><input id="boardZoom" type="range" min="25" max="300" value="100" aria-label="Board zoom" /><output id="zoomValue">100%</output><button id="zoomIn" aria-label="Zoom in">＋</button><button id="centerView">Center</button><button class="previewButton" id="preview"><span>◉</span> Preview</button><button id="reshuffleLoose">Reshuffle</button></div>
       </aside>
-      <div class="boardWrap"><div class="viewToolbar"><button id="zoomOut" aria-label="Zoom out">−</button><input id="boardZoom" type="range" min="25" max="300" value="100" aria-label="Board zoom" /><output id="zoomValue">100%</output><button id="zoomIn" aria-label="Zoom in">＋</button><button id="centerView">Center view</button><button id="reshuffleLoose">Reshuffle</button><button class="previewButton" id="preview"><span>◉</span> Preview</button><button id="saveSession">Save session</button></div><div class="puzzleStage" id="stage"><canvas id="puzzleCanvas" aria-label="Interactive jigsaw puzzle"></canvas></div></div>
+      <div class="boardWrap"><div class="puzzleStage" id="stage"><canvas id="puzzleCanvas" aria-label="Interactive jigsaw puzzle"></canvas></div></div>
     </div>
   </section>
   <div class="previewPopup" id="previewPopup" hidden><div><canvas id="previewPopupCanvas" aria-label="Puzzle preview image"></canvas></div></div>
   <div class="savedPreviewPopup" id="savedPreviewPopup" hidden><canvas id="savedPreviewCanvas" aria-label="Saved puzzle preview"></canvas></div>
 </main>
-<script src="app.js?v=20260813-mobile-board-fit"></script>
+<script src="app.js?v=20260813-compact-hud"></script>
 </body>
 </html>
