@@ -7,11 +7,11 @@
   <title>Puzzlr — Turn any image into a puzzle</title>
   <link rel="icon" href="public/favicon.svg" type="image/svg+xml" />
   <script>try{const t=localStorage.getItem('puzzlr-theme')||'system';document.documentElement.dataset.theme=t==='system'?(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t}catch{}</script>
-  <link rel="stylesheet" href="app/globals.css?v=20260813-safe-toolbar" />
+  <link rel="stylesheet" href="app/globals.css?v=20260813-piece-outlines" />
 </head>
 <body>
 <main>
-  <header class="topbar"><a class="brand" id="resetSite" href="./" aria-label="Reload Puzzlr"><span class="brandMark">P</span><span>PUZZLR</span></a><button class="newPuzzle" id="restartTop" type="button">New/load puzzle <span>↻</span></button><p>Turn any image into a puzzle.</p><div class="options"><button class="optionsButton" id="optionsButton" type="button" aria-label="Open options" aria-controls="optionsMenu" aria-expanded="false">⚙</button><div class="optionsMenu" id="optionsMenu" hidden><strong>OPTIONS</strong><label><span>Theme</span><select id="themeSelect" aria-label="Color theme"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label><label class="optionToggle"><span><b>Glow / shadows</b><small>Disable for better performance</small></span><input id="glowToggle" type="checkbox" checked /></label></div></div></header>
+  <header class="topbar"><a class="brand" id="resetSite" href="./" aria-label="Reload Puzzlr"><span class="brandMark">P</span><span>PUZZLR</span></a><button class="newPuzzle" id="restartTop" type="button">New/load puzzle <span>↻</span></button><p>Turn any image into a puzzle.</p><div class="options"><button class="optionsButton" id="optionsButton" type="button" aria-label="Open options" aria-controls="optionsMenu" aria-expanded="false">⚙</button><div class="optionsMenu" id="optionsMenu" hidden><strong>OPTIONS</strong><label><span>Theme</span><select id="themeSelect" aria-label="Color theme"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label><label class="optionToggle"><span><b>Glow / shadows</b><small>Disable for better performance</small></span><input id="glowToggle" type="checkbox" checked /></label><label class="optionToggle"><span><b>Piece outlines</b><small>Show black edges around pieces</small></span><input id="outlineToggle" type="checkbox" /></label></div></div></header>
   <div class="setupOverlay" id="setupOverlay"><section class="hero setupDialog" id="top" role="dialog" aria-modal="true" aria-labelledby="setupTitle">
     <div class="eyebrow"><span></span> YOUR IMAGE. YOUR CHALLENGE.</div>
     <h1 id="setupTitle">Piece it <em>together.</em></h1>
@@ -48,6 +48,6 @@
   <div class="previewPopup" id="previewPopup" hidden><div><canvas id="previewPopupCanvas" aria-label="Puzzle preview image"></canvas></div></div>
   <div class="savedPreviewPopup" id="savedPreviewPopup" hidden><canvas id="savedPreviewCanvas" aria-label="Saved puzzle preview"></canvas></div>
 </main>
-<script src="app.js?v=20260813-rotation-default"></script>
+<script src="app.js?v=20260813-piece-outlines"></script>
 </body>
 </html>
