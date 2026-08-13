@@ -7,7 +7,7 @@
   <title>Puzzlr — Turn any image into a puzzle</title>
   <link rel="icon" href="public/favicon.svg" type="image/svg+xml" />
   <script>try{const t=localStorage.getItem('puzzlr-theme')||'system';document.documentElement.dataset.theme=t==='system'?(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t}catch{}</script>
-  <link rel="stylesheet" href="app/globals.css?v=20260813-overlay-layer" />
+  <link rel="stylesheet" href="app/globals.css?v=20260813-rotation-row" />
 </head>
 <body>
 <main>
@@ -31,7 +31,7 @@
         <div class="cropPreview"><canvas id="cropCanvas" aria-label="Interactive crop editor"></canvas><p>DRAG THE RECTANGLE TO MOVE · DRAG A CORNER TO RESIZE</p></div>
         <div hidden><input id="boardWidth"><input id="boardHeight"><input id="cropWidth"><input id="cropHeight"><input id="cropX"><input id="cropY"></div>
       </div>
-      <div class="setupDifficulty"><span class="step">03</span><div><h2>Choose your challenge</h2><p>More pieces. More glory.</p></div><div class="levelTabs" id="levels" role="group" aria-label="Difficulty"></div><label class="rotationOption"><input id="allowRotation" type="checkbox" /><span><strong>ROTATE PIECES</strong><small>Click or tap to turn 90° clockwise</small></span></label></div>
+      <div class="setupDifficulty"><span class="step">03</span><div><h2>Choose your challenge</h2><p>More pieces. More glory.</p></div><div class="levelTabs" id="levels" role="group" aria-label="Difficulty"></div><label class="rotationOption"><input id="allowRotation" type="checkbox" /><span><strong>ROTATABLE PIECES</strong><small>Click or tap a piece to turn it 90° clockwise</small></span></label></div>
       <button class="startPuzzle" id="startPuzzle">Start puzzle <span>→</span></button></div>
     </div>
   </section></div>
@@ -48,6 +48,6 @@
   <div class="previewPopup" id="previewPopup" hidden><div><canvas id="previewPopupCanvas" aria-label="Puzzle preview image"></canvas></div></div>
   <div class="savedPreviewPopup" id="savedPreviewPopup" hidden><canvas id="savedPreviewCanvas" aria-label="Saved puzzle preview"></canvas></div>
 </main>
-<script src="app.js?v=20260813-overlay-layer"></script>
+<script src="app.js?v=20260813-rotation-row"></script>
 </body>
 </html>
