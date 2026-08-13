@@ -128,11 +128,11 @@ h1 em { color:var(--orange); }
 .track i { display:block; height:100%; background:var(--orange); transition:width .25s; }
 .previewButton { min-width:0; min-height:30px; padding:0 10px; border:1px solid #18201d; border-radius:0; background:#18201d; color:#fff; text-transform:uppercase; font-size:8px; line-height:1; letter-spacing:.12em; font-weight:800; cursor:pointer; -webkit-appearance:none; appearance:none; }
 .previewButton span { margin-right:7px; }
-.previewPopup { position:fixed; inset:0; z-index:30; display:grid; place-items:center; background:transparent; pointer-events:none; }
+.previewPopup { position:fixed; inset:0; z-index:220; display:grid; place-items:center; background:transparent; pointer-events:none; }
 .previewPopup[hidden] { display:none; }
 .previewPopup>div { width:100%; height:100%; display:grid; place-items:center; }
 .previewPopup canvas { display:block; max-width:100vw; max-height:100vh; }
-.savedPreviewPopup { position:fixed; z-index:40; padding:7px; border:1px solid #aaa99f; background:#fffdf7; box-shadow:6px 7px 0 rgba(24,32,29,.3); pointer-events:none; }
+.savedPreviewPopup { position:fixed; z-index:230; padding:7px; border:1px solid #aaa99f; background:#fffdf7; box-shadow:6px 7px 0 rgba(24,32,29,.3); pointer-events:none; }
 .savedPreviewPopup[hidden] { display:none; }
 .savedPreviewPopup canvas { display:block; max-width:min(260px,65vw); max-height:200px; }
 html[data-theme="dark"] .intro,html[data-theme="dark"] .addressRow input,html[data-theme="dark"] .difficulty p,html[data-theme="dark"] .setupDifficulty p,html[data-theme="dark"] .dimensionTitle small,html[data-theme="dark"] .stat span,html[data-theme="dark"] .completion span,html[data-theme="dark"] .sessionRow small { color:#aab5ae; }
