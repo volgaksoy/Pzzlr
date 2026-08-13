@@ -24,7 +24,7 @@ button { color:inherit; }
 .newPuzzle { border:0; background:transparent; text-transform:uppercase; letter-spacing:.12em; font-size:11px; font-weight:800; cursor:pointer; }
 .newPuzzle span { margin-left:8px; font-size:16px; }
 .hero { padding:72px 20px 42px; text-align:center; background:radial-gradient(circle at 20% 20%,rgba(202,215,189,.25),transparent 28%),var(--paper); }
-.setupOverlay { position:fixed; inset:0; z-index:20; overflow:auto; padding:28px; background:rgba(24,32,29,.76); backdrop-filter:blur(8px); }
+.setupOverlay { position:fixed; inset:0; z-index:200; overflow:auto; padding:28px; background:rgba(24,32,29,.76); backdrop-filter:blur(8px); }
 .setupOverlay[hidden] { display:none; }
 .setupDialog { width:min(960px,100%); min-height:0; margin:auto; padding:45px 24px 55px; border:1px solid #aaa99f; box-shadow:12px 14px 0 rgba(24,32,29,.35); }
 .setupDialog h1 { font-size:clamp(46px,7vw,82px); }
