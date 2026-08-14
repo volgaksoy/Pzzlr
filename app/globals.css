@@ -123,8 +123,8 @@ h1 em { color:var(--orange); }
 .levelTabs strong,.levelTabs small { display:block; }
 .levelTabs strong { text-transform:uppercase; font-size:10px; letter-spacing:.15em; }
 .levelTabs small { margin-top:4px; color:#898c86; font-family:Georgia,serif; font-style:italic; }
-.gameLayout { position:relative; width:100%; height:100%; min-height:0; }
-.stats { position:absolute; z-index:5; top:8px; left:8px; right:8px; display:flex; align-items:stretch; gap:1px; min-height:40px; padding:3px; background:var(--surface); box-shadow:0 2px 10px rgba(24,32,29,.2); font-size:11px; line-height:1; }
+.gameLayout { position:relative; display:flex; flex-direction:column; width:100%; height:100%; min-height:0; }
+.stats { position:relative; z-index:5; flex:0 0 auto; display:flex; align-items:stretch; gap:1px; min-height:40px; padding:3px; background:var(--surface); box-shadow:0 2px 10px rgba(24,32,29,.2); font-size:11px; line-height:1; }
 .hudSave { flex:0 0 auto; min-width:58px; padding:0 10px; border:1px solid #76906a; background:var(--surface); color:#4e6845; font-size:11px; font-weight:900; text-transform:uppercase; letter-spacing:.08em; cursor:pointer; }
 .stat { flex:0 0 64px; min-width:0; min-height:34px; display:flex; flex-direction:column; justify-content:center; background:var(--surface); padding:4px 6px; }
 .stat span,.completion span { display:block; font-size:10px; line-height:1; letter-spacing:.15em; font-weight:800; color:#737771; white-space:nowrap; }
@@ -135,8 +135,8 @@ h1 em { color:var(--orange); }
 .track { height:3px; margin-top:5px; background:#d5d2c8; }
 .track i { display:block; height:100%; background:var(--orange); transition:width .25s; }
 .previewButton { min-width:0; min-height:30px; padding:0 10px; border:1px solid #18201d; border-radius:0; background:#18201d; color:#fff; text-transform:uppercase; font-size:10px; line-height:1; letter-spacing:.12em; font-weight:800; cursor:pointer; -webkit-appearance:none; appearance:none; }
-.previewButton span { margin-right:7px; }
-.previewPopup { position:fixed; inset:0; z-index:220; display:grid; place-items:center; background:transparent; pointer-events:none; }
+.previewPopup { position:fixed; inset:0; z-index:220; display:grid; place-items:center; background:transparent; opacity:0; transition:opacity 100ms ease; pointer-events:none; }
+.previewPopup.isVisible { opacity:1; }
 .previewPopup[hidden] { display:none; }
 .previewPopup>div { width:100%; height:100%; display:grid; place-items:center; }
 .previewPopup canvas { display:block; max-width:100vw; max-height:100vh; }
@@ -153,7 +153,7 @@ html[data-theme="dark"] .savedPreviewPopup { background:var(--surface); border-c
 .tip>span { color:var(--orange); }
 .tip p { margin:0; font-family:Georgia,serif; font-size:11px; line-height:1.4; }
 .tip strong { display:block; font-family:Arial,sans-serif; font-size:10px; letter-spacing:.15em; margin-bottom:4px; }
-.boardWrap { position:relative; width:100%; height:100%; min-width:0; min-height:0; }
+.boardWrap { position:relative; flex:1 1 auto; width:100%; height:auto; min-width:0; min-height:0; }
 .viewToolbar { flex:1 1 auto; display:flex; flex-wrap:nowrap; justify-content:flex-end; align-items:center; gap:4px; min-width:0; margin-left:5px; }
 .viewToolbar button { height:30px; padding:0 10px; border:1px solid var(--board-line); background:var(--surface); color:var(--ink); font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:.08em; cursor:pointer; }
 .viewToolbar #zoomOut,.viewToolbar #zoomIn { width:32px; padding:0; font-size:16px; }
@@ -192,7 +192,6 @@ html[data-theme="dark"] .savedPreviewPopup { background:var(--surface); border-c
   .difficulty { align-items:stretch; flex-direction:column; }
   .levelTabs { width:100%; }
   .levelTabs button { min-width:0; flex:1; padding:9px 4px; }
-  .gameLayout { display:block; }
   .stats { flex-wrap:wrap; }
   .viewToolbar { flex:1 0 100%; justify-content:flex-start; margin:3px 0 0; }
   .completion { grid-column:auto; }
@@ -202,7 +201,7 @@ html[data-theme="dark"] .savedPreviewPopup { background:var(--surface); border-c
   .setupDifficulty { grid-template-columns:auto 1fr; }
   .setupDifficulty .levelTabs { grid-column:1/-1; }
 }
-@media (max-width:520px) { .stats { top:6px; left:6px; right:6px; } .hudSave { min-width:52px; padding-inline:7px; } .stat { flex-basis:54px; } .completion { flex:1 1 96px; min-width:96px; } .stat,.completion { min-height:32px; padding:4px 5px; } .stat strong { font-size:15px; } .viewToolbar input { width:min(110px,25vw); } .previewButton span { display:none; } }
+@media (max-width:520px) { .hudSave { min-width:52px; padding-inline:7px; } .stat { flex-basis:54px; } .completion { flex:1 1 96px; min-width:96px; } .stat,.completion { min-height:32px; padding:4px 5px; } .stat strong { font-size:15px; } .viewToolbar input { width:min(110px,25vw); } }
 @media (max-width:520px) { .imagePickers { grid-template-columns:1fr; } }
 @media (max-width:420px) { .topbar { height:64px; } .newPuzzle { font-size:10px; } .workspace { height:calc(100dvh - 64px); } .stat span,.completion span,.previewButton { font-size:10px; } .viewToolbar button { padding-inline:6px; font-size:10px; } .viewToolbar input { width:70px; } .viewToolbar output { min-width:30px; } .sessionRow { grid-template-columns:1fr; } .sessionActions { justify-content:flex-start; } }
 @media (prefers-reduced-motion:reduce) { * { scroll-behavior:auto!important; transition:none!important; } }
