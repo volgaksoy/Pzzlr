@@ -17,8 +17,9 @@
     <h1 id="setupTitle">Piece it <em>together.</em></h1>
     <p class="intro">Paste an image address or pick one from your device. We’ll scramble it—you bring it home.</p>
     <div class="sourceCard">
-      <div class="savedSessions" id="savedSessions" hidden><div class="savedSessionsHeading"><span>SAVED PUZZLES</span><h2>Continue where you left off.</h2></div><div id="lastSession"></div><div class="savedSessionsTitle previousTitle">MORE SAVED PUZZLES</div><div id="sessionList"></div><button class="newPuzzleChoice" id="showNewPuzzle" type="button">＋ New puzzle</button></div>
-      <div class="createPuzzlePanel" id="createPuzzlePanel"><button class="backToSessions" id="backToSessions" type="button" hidden>← Back to saved sessions</button><div class="divider newPuzzleDivider"><span>NEW PUZZLE</span></div>
+      <input id="importSessionFile" type="file" accept=".pzr,application/x-puzzlr,application/json" hidden />
+      <div class="savedSessions" id="savedSessions" hidden><div class="savedSessionsHeading"><span>SAVED PUZZLES</span><h2>Continue where you left off.</h2></div><div id="lastSession"></div><div class="savedSessionsTitle previousTitle">MORE SAVED PUZZLES</div><div id="sessionList"></div><div class="sessionLibraryActions"><button class="importPuzzleChoice importSession" type="button">Import .pzr</button><button class="newPuzzleChoice" id="showNewPuzzle" type="button">＋ New puzzle</button></div></div>
+      <div class="createPuzzlePanel" id="createPuzzlePanel"><div class="createPuzzleTools"><button class="backToSessions" id="backToSessions" type="button" hidden>← Back to saved sessions</button><button class="importPuzzleChoice importSession" type="button">Import .pzr</button></div><div class="divider newPuzzleDivider"><span>NEW PUZZLE</span></div>
       <label for="puzzleName">PUZZLE NAME</label>
       <input class="puzzleName" id="puzzleName" maxlength="80" autocomplete="off" />
       <label for="imageAddress">IMAGE ADDRESS</label>
@@ -49,6 +50,6 @@
   <div class="savedPreviewPopup" id="savedPreviewPopup" hidden><canvas id="savedPreviewCanvas" aria-label="Saved puzzle preview"></canvas></div>
   <aside class="cacheDebugPanel" id="cacheDebugPanel" hidden><strong>NAVIGATION CACHE</strong><canvas id="cacheDebugCanvas" aria-label="Navigation cache debug view"></canvas><output id="cacheDebugInfo">Waiting for pan or zoom…</output></aside>
 </main>
-<script src="app.js?v=20260815-board-labels"></script>
+<script src="app.js?v=20260815-session-exchange"></script>
 </body>
 </html>

@@ -107,7 +107,11 @@ h1 em { color:var(--orange); }
 .sessionRow .deleteSession { color:#a33e2b; border-color:#c99b91; }
 .sessionActions { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:6px; }
 .previousTitle { margin-top:16px; }
-.newPuzzleChoice { width:100%; margin-top:20px; padding:14px; border:1px solid var(--board-line); background:var(--surface); color:var(--ink); font-size:10px; font-weight:900; letter-spacing:.12em; text-transform:uppercase; cursor:pointer; }
+.sessionLibraryActions { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:20px; }
+.newPuzzleChoice,.importPuzzleChoice { width:100%; padding:14px; border:1px solid var(--board-line); background:var(--surface); color:var(--ink); font-size:10px; font-weight:900; letter-spacing:.12em; text-transform:uppercase; cursor:pointer; }
+.importPuzzleChoice { border-color:var(--orange); color:var(--orange); }
+.createPuzzleTools { display:flex; justify-content:space-between; align-items:center; gap:8px; margin-bottom:8px; }
+.createPuzzleTools .importPuzzleChoice { width:auto; margin-left:auto; padding:9px 12px; }
 .createPuzzlePanel[hidden] { display:none; }
 .backToSessions { margin:0 0 8px; padding:9px 12px; border:1px solid var(--board-line); background:var(--surface); color:var(--ink); font-size:10px; font-weight:900; letter-spacing:.08em; text-transform:uppercase; cursor:pointer; }
 .backToSessions[hidden] { display:none; }
@@ -203,5 +207,6 @@ html[data-theme="dark"] .savedPreviewPopup { background:var(--surface); border-c
 }
 @media (max-width:520px) { .hudSave { min-width:52px; padding-inline:7px; } .stat { flex-basis:54px; } .completion { flex:1 1 96px; min-width:96px; } .stat,.completion { min-height:32px; padding:4px 5px; } .stat strong { font-size:15px; } .viewToolbar input { width:min(110px,25vw); } }
 @media (max-width:520px) { .imagePickers { grid-template-columns:1fr; } }
+@media (max-width:520px) { .sessionLibraryActions { grid-template-columns:1fr; } }
 @media (max-width:420px) { .topbar { height:64px; } .newPuzzle { font-size:10px; } .workspace { height:calc(100dvh - 64px); } .stat span,.completion span,.previewButton { font-size:10px; } .viewToolbar button { padding-inline:6px; font-size:10px; } .viewToolbar input { width:70px; } .viewToolbar output { min-width:30px; } .sessionRow { grid-template-columns:1fr; } .sessionActions { justify-content:flex-start; } }
 @media (prefers-reduced-motion:reduce) { * { scroll-behavior:auto!important; transition:none!important; } }
