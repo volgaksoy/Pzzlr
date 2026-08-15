@@ -109,7 +109,6 @@ h1 em { color:var(--orange); }
 .previousTitle { margin-top:16px; }
 .sessionLibraryActions { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:20px; }
 .newPuzzleChoice,.importPuzzleChoice { width:100%; padding:14px; border:1px solid var(--board-line); background:var(--surface); color:var(--ink); font-size:10px; font-weight:900; letter-spacing:.12em; text-transform:uppercase; cursor:pointer; }
-.importPuzzleChoice { border-color:var(--orange); color:var(--orange); }
 .createPuzzleTools { display:flex; justify-content:space-between; align-items:center; gap:8px; margin-bottom:8px; }
 .createPuzzleTools .importPuzzleChoice { width:auto; margin-left:auto; padding:9px 12px; }
 .createPuzzlePanel[hidden] { display:none; }
