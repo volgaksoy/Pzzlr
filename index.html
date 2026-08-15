@@ -40,7 +40,7 @@
       <aside class="stats">
         <div class="stat"><span>TIME</span><strong id="time">00:00</strong></div>
         <div class="stat"><span>MOVES</span><strong id="moves">00</strong></div>
-        <div class="completion"><div><span>COMPLETION</span><strong id="percent">0%</strong></div><div class="track"><i id="progress"></i></div></div><div class="viewToolbar"><button class="hudSave" id="saveSession">Save</button><button class="previewButton" id="preview">Preview</button><button id="centerView">Center</button><button id="zoomOut" aria-label="Zoom out">−</button><input id="boardZoom" type="range" min="25" max="300" value="100" aria-label="Board zoom" /><output id="zoomValue">100%</output><button id="zoomIn" aria-label="Zoom in">＋</button><button id="reshuffleLoose">Reshuffle</button></div>
+        <div class="completion"><div><span>COMPLETION</span><strong id="percent">0%</strong></div><div class="track"><i id="progress"></i></div></div><div class="viewToolbar"><button class="hudSave" id="saveSession">Save</button><button class="previewButton" id="preview">Preview</button><button id="centerView">Center</button><button id="zoomOut" aria-label="Zoom out">−</button><input id="boardZoom" type="range" min="25" max="1000" value="100" aria-label="Board zoom" /><output id="zoomValue">100%</output><button id="zoomIn" aria-label="Zoom in">＋</button><button id="reshuffleLoose">Reshuffle</button></div>
       </aside>
       <div class="boardWrap"><div class="puzzleStage" id="stage"><canvas id="puzzleCanvas" aria-label="Interactive jigsaw puzzle"></canvas></div></div>
     </div>
@@ -49,6 +49,6 @@
   <div class="savedPreviewPopup" id="savedPreviewPopup" hidden><canvas id="savedPreviewCanvas" aria-label="Saved puzzle preview"></canvas></div>
   <aside class="cacheDebugPanel" id="cacheDebugPanel" hidden><strong>NAVIGATION CACHE</strong><canvas id="cacheDebugCanvas" aria-label="Navigation cache debug view"></canvas><output id="cacheDebugInfo">Waiting for pan or zoom…</output></aside>
 </main>
-<script src="app.js?v=20260815-session-progress-pan"></script>
+<script src="app.js?v=20260815-unified-zoom"></script>
 </body>
 </html>
