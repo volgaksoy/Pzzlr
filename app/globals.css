@@ -158,10 +158,10 @@ html[data-theme="dark"] .savedPreviewPopup { background:var(--surface); border-c
 .tip strong { display:block; font-family:Arial,sans-serif; font-size:10px; letter-spacing:.15em; margin-bottom:4px; }
 .boardWrap { position:relative; flex:1 1 auto; width:100%; height:auto; min-width:0; min-height:0; }
 .viewToolbar { flex:1 1 auto; display:flex; flex-wrap:nowrap; justify-content:flex-end; align-items:center; gap:4px; min-width:0; margin-left:5px; }
-.viewToolbar button { height:30px; padding:0 10px; border:1px solid var(--board-line); background:var(--surface); color:var(--ink); font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:.08em; cursor:pointer; }
+.viewToolbar button { flex:0 0 auto; height:30px; padding:0 10px; border:1px solid var(--board-line); border-radius:0; background:var(--surface); color:var(--ink); font-size:10px; font-weight:800; line-height:1; text-transform:uppercase; letter-spacing:.08em; white-space:nowrap; cursor:pointer; -webkit-appearance:none; appearance:none; }
 .viewToolbar #zoomOut,.viewToolbar #zoomIn { width:32px; padding:0; font-size:16px; }
-.viewToolbar input { width:min(180px,30vw); accent-color:var(--orange); }
-.viewToolbar output { min-width:38px; color:var(--orange); font-size:11px; font-weight:900; }
+.viewToolbar input { flex:1 1 180px; width:auto; min-width:40px; max-width:180px; accent-color:var(--orange); }
+.viewToolbar output { flex:0 0 42px; min-width:0; color:var(--orange); font-size:11px; font-weight:900; text-align:center; }
 #reshuffleLoose { margin-left:auto; border-color:var(--orange); color:var(--orange); }
 #saveSession { border-color:#76906a; color:#4e6845; }
 .puzzleStage { position:absolute; inset:0; width:100%; height:100%; overflow:hidden; border:0; box-shadow:none; background:#e7e1d4; touch-action:none; }
@@ -204,8 +204,9 @@ html[data-theme="dark"] .savedPreviewPopup { background:var(--surface); border-c
   .setupDifficulty { grid-template-columns:auto 1fr; }
   .setupDifficulty .levelTabs { grid-column:1/-1; }
 }
-@media (max-width:520px) { .hudSave { min-width:52px; padding-inline:7px; } .stat { flex-basis:54px; } .completion { flex:1 1 96px; min-width:96px; } .stat,.completion { min-height:32px; padding:4px 5px; } .stat strong { font-size:15px; } .viewToolbar input { width:min(110px,25vw); } }
+@media (max-width:520px) { .hudSave { min-width:52px; padding-inline:7px; } .stat { flex-basis:54px; } .completion { flex:1 1 96px; min-width:96px; } .stat,.completion { min-height:32px; padding:4px 5px; } .stat strong { font-size:15px; } .viewToolbar input { flex-basis:110px; min-width:28px; max-width:110px; } }
 @media (max-width:520px) { .imagePickers { grid-template-columns:1fr; } }
 @media (max-width:520px) { .sessionLibraryActions { grid-template-columns:1fr; } }
-@media (max-width:420px) { .topbar { height:64px; } .newPuzzle { font-size:10px; } .workspace { height:calc(100dvh - 64px); } .stat span,.completion span,.previewButton { font-size:10px; } .viewToolbar button { padding-inline:6px; font-size:10px; } .viewToolbar input { width:70px; } .viewToolbar output { min-width:30px; } .sessionRow { grid-template-columns:1fr; } .sessionActions { justify-content:flex-start; } }
+@media (max-width:420px) { .topbar { height:64px; } .newPuzzle { font-size:10px; } .workspace { height:calc(100dvh - 64px); } .stat span,.completion span,.previewButton { font-size:10px; } .viewToolbar { gap:2px; } .viewToolbar button { padding-inline:4px; font-size:10px; } .viewToolbar #zoomOut,.viewToolbar #zoomIn { width:28px; } .viewToolbar input { flex-basis:70px; min-width:20px; max-width:70px; } .viewToolbar output { flex-basis:30px; } .sessionRow { grid-template-columns:1fr; } .sessionActions { justify-content:flex-start; } }
+@media (max-width:350px) { .viewToolbar { flex-wrap:wrap; } .viewToolbar #reshuffleLoose { margin-left:auto; } }
 @media (prefers-reduced-motion:reduce) { * { scroll-behavior:auto!important; transition:none!important; } }
